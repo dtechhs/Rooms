@@ -676,6 +676,7 @@ else {
 
     desc = `${peopleStr} room.`
   }
+  alert(desc)
   if (!!desc === false) {
     desc = data.description
   }
@@ -683,6 +684,5 @@ else {
   
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
-  alert(desc)
   roomsEle.innerHMTL = desc
 }
