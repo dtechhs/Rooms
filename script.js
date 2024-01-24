@@ -680,5 +680,4 @@ else {
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
   document.querySelector('.rooms').innerHTML = desc
-  alert(desc)
 }
