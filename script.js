@@ -2,7 +2,7 @@ let title = document.title
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
-if (!!String(parseInt(r)).length === r.length) r = parseInt(r)
+if (!!parseInt(r)) r = parseInt(r)
 
 const roomsEle = document.querySelector('.rooms')
 
