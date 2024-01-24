@@ -628,7 +628,7 @@ else {
     desc = `Outside of ${roomsStr}.`
   }
 
-  if (desc.type === 'name') {
+  if (desc.type === 'names') {
     var people = data[parseInt(r)].people
     var newPeople = Object.assign([], people)
     var lastPerson = newPeople.pop()
