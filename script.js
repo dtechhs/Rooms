@@ -611,7 +611,7 @@ else {
   var data = data[parseInt(r)]
   var desc = ''
 
-  if (desc.type === 'room') {
+  if (data.description.type === 'room') {
     var rooms = data.rooms
     var newRooms = Object.assign([], rooms)
     var lastRoom = newRooms.pop()
@@ -625,8 +625,7 @@ else {
 
     desc = `Outside of ${roomsStr}.`
   }
-
-  if (desc.type === 'names') {
+  else if (data.description.type === 'names') {
     var people = data.people
     var newPeople = Object.assign([], people)
     var lastPerson = newPeople.pop()
@@ -676,11 +675,12 @@ else {
 
     desc = `${peopleStr} room.`
   }
-  alert(desc)
   if (!!desc === false) {
     desc = data.description
   }
   if (!!desc.custom) desc = desc.custom
+
+  alert(desc)
   
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
