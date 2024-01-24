@@ -676,9 +676,9 @@ else {
     desc = data.description
   }
   if (!!desc.custom) desc = desc.custom
-  alert(document.querySelector('.rooms'))
 
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
   document.querySelector('.rooms').innerHTML = desc
+  alert(desc)
 }
