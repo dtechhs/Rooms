@@ -679,9 +679,8 @@ else {
     desc = data.description
   }
   if (!!desc.custom) desc = desc.custom
+  alert(roomsEle)
 
-  alert(desc)
-  
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
   roomsEle.innerHMTL = desc
