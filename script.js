@@ -61,18 +61,18 @@ let ROOMS = [
 
 var data = {
   103: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Joe Schneider',
       }, 
     ], 
-		description: {
+    description: {
       type: 'names', 
     },
-	}, 
+  }, 
   '1A': {
- 	  description: {
+    description: {
       type: 'Outside',
     }, 
     rooms: [
@@ -80,46 +80,46 @@ var data = {
       104, 
       105, 
     ]
-	},
+  },
   104: {
- 		people: [
+    people: [
       {
         name: 'Paul Cerra'
       }
     ],
-		description: {
+    description: {
       type: 'names', 
     },
-	}, 
+  }, 
   105: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Mariela González', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
   106: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Hannah Ayers', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   107: {
-		description: {
-			custom: 'Storage!'
-		}
-	}, 
+    description: {
+    custom: 'Storage!'
+    }
+  }, 
   '1B': {
-	  description: {
+    description: {
       type: 'Outside',
     }, 
     rooms: [
@@ -127,20 +127,20 @@ var data = {
       107, 
       108, 
     ]
-	},
+  },
   108: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Karissa LeCroy', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   109: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Liz Ramirez', 
@@ -149,17 +149,17 @@ var data = {
         name: 'Claudia Rask'
       }, 
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   113: {
-		description: {
-			custom: 'Dragon Dining!<br>On thr first floor!'
-		}
-	}, 
+    description: {
+      custom: 'Dragon Dining!<br>On thr first floor!'
+    }
+  }, 
   114: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Leo Stern', 
@@ -169,53 +169,53 @@ var data = {
         name: 'Wayne Brock', 
       }, 
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   'ATR': {
- 		people: [
+    people: [
       {
         name: 'Abbie Rosete'
       }
     ],
-		description: {
-			custom: 'The Main Meeting Space and the Entryway!'
-		}
-	}, 
+    description: {
+      custom: 'The Main Meeting Space and the Entryway!'
+    }
+  }, 
   116: {
-		description: {
-			custom: 'Office!'
-		}
-	}, 
+    description: {
+      custom: 'Office!'
+    }
+  }, 
   117: {
- 		people: [
+    people: [
       {
         name: 'Courtney Gomez'
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   120: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Greg Fenner', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   121: {
-		description: {
-			custom: 'Staff Room!'
-		}
-	}, 
+    description: {
+      custom: 'Staff Room!'
+    }
+  }, 
   126: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Christina Deberry', 
@@ -229,23 +229,23 @@ var data = {
         name: 'Ken Klieman', 
       }, 
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   127: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: "Kam O'Horo", 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   '1D': {
-		description: {
+    description: {
       type: 'Outside',
     }, 
     rooms: [
@@ -254,41 +254,41 @@ var data = {
       128, 
       129, 
     ]
-	},
+  },
   128: {
- 		people: [
+    people: [
       {
         name: 'John Carcione'
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   129: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Chelsea Glickman', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   130: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Eric Silva', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   '1E': {
-		description: {
+    description: {
       type: 'Outside', 
     }, 
     rooms: [
@@ -296,9 +296,9 @@ var data = {
       131, 
       132, 
     ]
-	}, 
+  }, 
   131: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Sifa Etu', 
@@ -308,34 +308,34 @@ var data = {
         name: 'Wendy Gradek', 
       }, 
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   132: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Daniel McGowan', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   202: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Margarita Contreras', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   203: {
- 		people: [
+    people: [
       {
         name: 'Fannie Hsieh'
       }, 
@@ -344,12 +344,12 @@ var data = {
         name: 'Jasmine Sheen', 
       },
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   '2A': {
-		description: {
+    description: {
       type: 'Outside', 
     }, 
     rooms: [
@@ -358,9 +358,9 @@ var data = {
       204, 
       205, 
     ]
-	},
+  },
   204: {
- 		people: [
+    people: [
       {
         name: 'Nicole Cerra', 
       }, 
@@ -369,45 +369,45 @@ var data = {
         name: 'Ken Montgomery', 
       },
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   205: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Henry Lonnemann', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   206: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Aruna Murthy', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   207: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Andrea Booth', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   '2B': {
-		description: {
+    description: {
       type: 'Outside',
     }, 
     rooms: [
@@ -415,20 +415,20 @@ var data = {
       207, 
       208, 
     ]
-	},
+  },
   208: {
- 		people: [
+    people: [
       {
         pro: 'Mx', 
         name: 'Karen Atkinson', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   209: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Amanda England', 
@@ -437,12 +437,12 @@ var data = {
         name: 'Molly Robertson', 
       },
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   212: {
- 		people: [
+    people: [
       {
         name: 'Jen Trent', 
       }, 
@@ -459,63 +459,63 @@ var data = {
         name: 'Eileen McCarthy', 
       },
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   213: {
-		description: {
-			custom: 'The West patio!'
-		}
-	},
+    description: {
+      custom: 'The West patio!'
+    }
+  },
   214: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Mike Tyau', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	}, 
+    }
+  }, 
   220: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Neal Addicott', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-  	}
-	},
+    }
+  },
   '2C': {
-		description: {
+    description: {
       type: 'Outside', 
     }, 
     rooms: [
       220, 
     ]
-	},
+  },
   222: {
-		description: {
-			custom: 'The East patio!'
-		}
-	},
+    description: {
+      custom: 'The East patio!'
+    }
+  },
   227: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Max Cady', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	},
+    }
+  },
   '2D': {
-		description: {
+    description: {
       type: 'Outside', 
     }, 
     rooms: [
@@ -523,46 +523,46 @@ var data = {
       228, 
       229, 
     ]
-	},
+  },
   228: {
-		description: {
-			custom: 'Studio 1: Recording Studio!'
-		}
-	}, 
+    description: {
+      custom: 'Studio 1: Recording Studio!'
+    }
+  }, 
   229: {
- 		people: [
+    people: [
       {
         pro: 'Ms', 
         name: 'Grace Sabido', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
   230: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Kevin Groh', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
   231: {
- 		people: [
+    people: [
       {
         name: 'Azra Tucic', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
   '2E': {
-		description: {
+    description: {
       type: 'Outside', 
     }, 
     rooms: [
@@ -571,20 +571,20 @@ var data = {
       232, 
       233, 
     ]
-	},
+  },
   232: {
- 		people: [
+    people: [
       {
         pro: 'Mr', 
         name: 'Nathan Pierce', 
       }
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
   233: {
- 		people: [
+    people: [
       {
         name: 'Hanan Holloway', 
       }, 
@@ -592,10 +592,10 @@ var data = {
         name: 'Ashley Wong', 
       },
     ],
-		description: {
+    description: {
       type: 'names', 
-		}
-	}, 
+    }
+  }, 
 }
 
 if (!!r === false) {
