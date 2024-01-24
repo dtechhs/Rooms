@@ -643,7 +643,7 @@ else {
 
       if (name.includes(' ')) {
         email = name.split(' ')
-        email = `${email[0][0]}${email[1]}`
+        email = `${email[0][0]}${email[1]}`.toLowerCase()
         if (!!email) email += '@dtechhs.org'
       }
 
