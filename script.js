@@ -4,8 +4,6 @@ const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
 if (!!parseInt(r)) r = parseInt(r)
 
-const roomsEle = document.querySelector('.rooms')
-
 let ROOMS = [
   103, 
   '1A', 
@@ -605,7 +603,7 @@ if (!!r === false) {
     if (i !== 0) nDesc += ' | '
     nDesc += `<a href="?r=${r}">${r}</a>`
   })
-  roomsEle.innerHTML = `${nDesc}`
+  document.querySelector('.rooms').innerHTML = `${nDesc}`
 }
 else {
   var data = data[parseInt(r)]
@@ -679,9 +677,9 @@ else {
     desc = data.description
   }
   if (!!desc.custom) desc = desc.custom
-  alert(roomsEle)
+  alert(document.querySelector('.rooms'))
 
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
-  roomsEle.innerHMTL = desc
+  document.querySelector('.rooms').innerHMTL = desc
 }
