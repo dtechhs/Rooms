@@ -428,7 +428,6 @@ var data = {
   209: {
     people: [
       {
-        pro: 'Ms', 
         name: 'Amanda England', 
       }, 
       {
@@ -661,7 +660,7 @@ else {
         lastDisplayName = lastDisplayName.split(' ')
         lastDisplayName = name.split(`${lastDisplayName[0]} `)[1]
       }
-      displayName = `${person.pro} ${displayName}`
+      displayName = `${person.pro}. ${displayName}`
     }
 
     if (lastName.includes(' ')) {
@@ -681,5 +680,5 @@ else {
 
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
-  document.querySelector('.rooms').innerHMTL = desc
+  document.querySelector('.rooms').innerHTML = desc
 }
