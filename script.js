@@ -676,7 +676,7 @@ else {
 
     desc = `${peopleStr} room.`
   }
-  if (!!desc == false) {
+  if (!!desc === false) {
     desc = data.description
   }
   if (!!desc.custom) desc = desc.custom
