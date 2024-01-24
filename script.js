@@ -597,7 +597,6 @@ var data = {
 		}
 	}, 
 }
-console.log(data)
 
 if (!!r === false) {
   document.body.setAttribute('align', 'center')
