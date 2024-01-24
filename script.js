@@ -665,7 +665,7 @@ else {
 
     if (lastName.includes(' ')) {
       lastEmail = lastName.split(' ')
-      lastEmail = `${lastEmail[0][0]}${lastEmail[1]}`
+      lastEmail = `${lastEmail[0][0]}${lastEmail[1]}`.toLowerCase()
       if (!!lastEmail) lastEmail += '@dtechhs.org'
     }
     peopleStr += ` and <a href="https://contacts.google.com/${lastEmail}">${lastDisplayName}</a>'s`.replace("s's", "s'")
