@@ -638,7 +638,7 @@ else {
           displayName = displayName.split(' ')
           displayName = name.split(`${displayName[0]} `)[1]
         }
-        displayName = `${person.pro} ${displayName}`
+        displayName = `${person.pro}. ${displayName}`
       }
 
       if (name.includes(' ')) {
