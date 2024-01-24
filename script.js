@@ -678,5 +678,7 @@ else {
 
     desc = `${peopleStr} room.`
   }
+  document.body.setAttribute('align', 'center')
+  document.querySelector('.room').innerHTML = r
+  roomsEle.innerHMTL = desc
 }
-
