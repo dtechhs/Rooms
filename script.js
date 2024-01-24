@@ -609,9 +609,7 @@ if (!!r === false) {
 }
 else {
   var data = data[parseInt(r)]
-
-  var desc = data.description
-  if (!!desc.custom) desc = desc.custom
+  var desc = ''
 
   if (desc.type === 'room') {
     var rooms = data.rooms
@@ -678,7 +676,13 @@ else {
 
     desc = `${peopleStr} room.`
   }
+  if (!!desc == false) {
+    desc = data.description
+  }
+  if (!!desc.custom) desc = desc.custom
+  
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
+  alert(desc)
   roomsEle.innerHMTL = desc
 }
