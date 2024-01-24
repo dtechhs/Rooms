@@ -629,7 +629,7 @@ else {
   }
 
   if (desc.type === 'names') {
-    var people = data[parseInt(r)].people
+    var people = data.people
     var newPeople = Object.assign([], people)
     var lastPerson = newPeople.pop()
 
