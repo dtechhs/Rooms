@@ -597,6 +597,7 @@ var data = {
 		}
 	}, 
 }
+console.log(data)
 
 if (!!r === false) {
   document.body.setAttribute('align', 'center')
@@ -679,3 +680,4 @@ else {
     desc = `${peopleStr} room.`
   }
 }
+
