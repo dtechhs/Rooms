@@ -652,7 +652,7 @@ else {
     })
 
     var lastName = lastPerson.name
-    var lastDisplayName = lastName
+    var lastDisplayName = lastPerson.name
     var lastEmail = ''
 
     if (!!lastPerson.pro) {
@@ -663,6 +663,7 @@ else {
       displayName = `${lastPerson.pro}. ${lastDisplayName}`
     }
 
+    var lastDisplayName = lastPerson.name
     if (lastName.includes(' ')) {
       lastEmail = lastName.split(' ')
       lastEmail = `${lastEmail[0][0]}${lastEmail[1]}`.toLowerCase()
