@@ -660,7 +660,7 @@ else {
         lastDisplayName = lastDisplayName.split(' ')
         lastDisplayName = name.split(`${lastDisplayName[0]} `)[1]
       }
-      displayName = `${person.pro}. ${displayName}`
+      displayName = `${lastPerson.pro}. ${lastDisplayName}`
     }
 
     if (lastName.includes(' ')) {
@@ -668,7 +668,7 @@ else {
       lastEmail = `${lastEmail[0][0]}${lastEmail[1]}`.toLowerCase()
       if (!!lastEmail) lastEmail += '@dtechhs.org'
     }
-    peopleStr += ` and <a href="https://contacts.google.com/${lastEmail}">${lastDisplayName}</a>'s`.replace("s's", "s'")
+    peopleStr += ` and <a href="https://contacts.google.com/${lastEmail}">${lastDisplayName}</a>'s`.replace(`s's`, `s'`)
 
     desc = `${peopleStr} room.`
   }
