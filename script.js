@@ -93,7 +93,7 @@ var data = {
     people: [
       {
         pro: 'Ms', 
-        name: 'Mariela González', 
+        name: 'Juan Felipe Olaya Pardo', 
       }
     ],
     description: {
@@ -113,7 +113,7 @@ var data = {
   }, 
   107: {
     description: {
-    custom: 'Storage!'
+      custom: 'Storage!'
     }
   }, 
   '1B': {
@@ -130,7 +130,7 @@ var data = {
     people: [
       {
         pro: 'Ms', 
-        name: 'Karissa LeCroy', 
+        name: 'Jacky Schlegel', 
       }
     ],
     description: {
@@ -189,7 +189,8 @@ var data = {
   117: {
     people: [
       {
-        name: 'Courtney Gomez'
+        pro: 'Dr', 
+        name: 'Marbella Alfonzo'
       }
     ],
     description: {
@@ -222,10 +223,6 @@ var data = {
         pro: 'Ms', 
         name: 'Karen Brewster', 
       }, 
-      {
-        pro: 'Mr', 
-        name: 'Ken Klieman', 
-      }, 
     ],
     description: {
       type: 'names', 
@@ -256,7 +253,7 @@ var data = {
   128: {
     people: [
       {
-        name: 'John Carcione'
+        name: 'Heather Kaech'
       }
     ],
     description: {
@@ -298,10 +295,6 @@ var data = {
   131: {
     people: [
       {
-        pro: 'Mr', 
-        name: 'Sifa Etu', 
-      }, 
-      {
         pro: 'Ms', 
         name: 'Wendy Gradek', 
       }, 
@@ -324,7 +317,7 @@ var data = {
   202: {
     people: [
       {
-        pro: 'Ms', 
+        pro: 'Dr', 
         name: 'Margarita Contreras', 
       }
     ],
@@ -334,9 +327,6 @@ var data = {
   }, 
   203: {
     people: [
-      {
-        name: 'Fannie Hsieh'
-      }, 
       {
         pro: 'Ms', 
         name: 'Jasmine Sheen', 
@@ -366,6 +356,9 @@ var data = {
         pro: 'Dr', 
         name: 'Ken Montgomery', 
       },
+      {
+        name: 'Jamie Frankos', 
+      }, 
     ],
     description: {
       type: 'names', 
@@ -397,7 +390,7 @@ var data = {
     people: [
       {
         pro: 'Ms', 
-        name: 'Andrea Booth', 
+        name: 'Ingrid Mao', 
       }
     ],
     description: {
@@ -451,10 +444,6 @@ var data = {
         pro: 'Mr', 
         name: 'Zach Pugliano', 
       },
-      {
-        pro: 'Ms', 
-        name: 'Eileen McCarthy', 
-      },
     ],
     description: {
       type: 'names', 
@@ -469,7 +458,11 @@ var data = {
     people: [
       {
         pro: 'Mr', 
-        name: 'Mike Tyau', 
+        name: 'Mike Bam Tyau', 
+      },
+      {
+        pro: 'Mr', 
+        name: 'Max Cady', 
       }
     ],
     description: {
@@ -504,7 +497,7 @@ var data = {
     people: [
       {
         pro: 'Mr', 
-        name: 'Max Cady', 
+        name: 'Guy Geva', 
       }
     ],
     description: {
@@ -549,13 +542,8 @@ var data = {
     }
   }, 
   231: {
-    people: [
-      {
-        name: 'Azra Tucic', 
-      }
-    ],
     description: {
-      type: 'names', 
+      custom: 'Unassigned'
     }
   }, 
   '2E': {
