@@ -4,59 +4,6 @@ const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
 if (!!parseInt(r)) r = parseInt(r)
 
-let ROOMS = [
-  103, 
-  '1A', 
-  104, 
-  105, 
-  106, 
-  107, 
-  '1B', 
-  108, 
-  109, 
-  113, 
-  114, 
-  'ATR', 
-  116, 
-  117, 
-  120, 
-  121, 
-  126, 
-  127, 
-  '1D', 
-  128, 
-  129, 
-  130, 
-  '1E', 
-  131, 
-  132, 
-  202, 
-  203, 
-  '2A', 
-  204, 
-  205, 
-  206, 
-  207, 
-  '2B', 
-  208, 
-  209, 
-  212, 
-  213, 
-  214, 
-  220, 
-  '2C', 
-  222, 
-  227, 
-  '2D', 
-  228, 
-  229, 
-  230, 
-  231, 
-  232, 
-  '2E', 
-  233, 
-]
-
 var data = {
   103: {
     people: [
@@ -223,6 +170,10 @@ var data = {
         pro: 'Ms', 
         name: 'Karen Brewster', 
       }, 
+      {
+        pro: 'Ms', 
+        name: 'Kelly Mendoza', 
+      }, 
     ],
     description: {
       type: 'names', 
@@ -293,14 +244,8 @@ var data = {
     ]
   }, 
   131: {
-    people: [
-      {
-        pro: 'Ms', 
-        name: 'Wendy Gradek', 
-      }, 
-    ],
     description: {
-      type: 'names', 
+      custom: 'The Athletics Room!'
     }
   }, 
   132: {
@@ -586,7 +531,7 @@ var data = {
 if (!!r === false) {
   document.body.setAttribute('align', 'center')
   var nDesc = ''
-  ROOMS.forEach((r, i) => {
+  Object.keys(data).forEach((r, i) => {
     if (i !== 0) nDesc += ' | '
     nDesc += `<a href="?r=${r}">${r}</a>`
   })
