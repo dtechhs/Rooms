@@ -4,6 +4,32 @@ const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
 if (!!parseInt(r)) r = parseInt(r)
 
+function parsePerson(person) {
+  var peopleStr = ''
+  var name = person.name
+  var displayName = name
+  var email = ''
+
+  if (!!person.pro) {
+    if (displayName.includes(' ')) {
+      displayName = displayName.split(' ')
+      displayName = name.split(`${displayName[0]} `)[1]
+    }
+    displayName = `${person.pro}. ${displayName}`
+  }
+
+  if (name.includes(' ')) {
+    email = name.split(' ')
+    email = `${email[0][0]}${email[1]}`.toLowerCase()
+    if (!!email) email += '@dtechhs.org'
+  }
+
+  if (i !== 0) peopleStr += `, `
+  peopleStr += `<a href="https://contacts.google.com/${email}">${displayName}</a>`
+
+  return peopleStr
+}
+
 var data = {
   103: {
     people: [
@@ -566,51 +592,21 @@ else {
   else if (data.description.type === 'names') {
     var people = data.people
     var newPeople = Object.assign([], people)
-    var lastPerson = newPeople.pop()
 
     var peopleStr = ''
-    newPeople.forEach(function(person, i) {
-      var name = person.name
-      var displayName = name
-      var email = ''
+    if (newPeople.length > 1) {
+      var lastPerson = newPeople.pop()
 
-      if (!!person.pro) {
-        if (displayName.includes(' ')) {
-          displayName = displayName.split(' ')
-          displayName = name.split(`${displayName[0]} `)[1]
-        }
-        displayName = `${person.pro}. ${displayName}`
-      }
-
-      if (name.includes(' ')) {
-        email = name.split(' ')
-        email = `${email[0][0]}${email[1]}`.toLowerCase()
-        if (!!email) email += '@dtechhs.org'
-      }
-
-      if (i !== 0) peopleStr += `, `
-      peopleStr += `<a href="https://contacts.google.com/${email}">${displayName}</a>`
-    })
-
-    var lastName = lastPerson.name
-    var lastDisplayName = lastPerson.name
-    var lastEmail = ''
-
-    if (!!lastPerson.pro) {
-      if (lastDisplayName.includes(' ')) {
-        lastDisplayName = lastDisplayName.split(' ')
-        lastDisplayName = name.split(`${lastDisplayName[0]} `)[1]
-      }
-      displayName = `${lastPerson.pro}. ${lastDisplayName}`
+      newPeople.forEach(function(person, i) {
+        peopleStr += parsePerson(person)
+      })
+  
+      peopleStr += ` and ${parsePerson(person)}'s`.replace(`s's`, `s'`)
     }
-
-    var lastDisplayName = lastPerson.name
-    if (lastName.includes(' ')) {
-      lastEmail = lastName.split(' ')
-      lastEmail = `${lastEmail[0][0]}${lastEmail[1]}`.toLowerCase()
-      if (!!lastEmail) lastEmail += '@dtechhs.org'
+    else {
+      var person = newPeople[0]
+      peopleStr += parsePerson(person)
     }
-    peopleStr += ` and <a href="https://contacts.google.com/${lastEmail}">${lastDisplayName}</a>'s`.replace(`s's`, `s'`)
 
     desc = `${peopleStr} room.`
   }
