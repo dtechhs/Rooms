@@ -601,11 +601,11 @@ else {
         peopleStr += parsePerson(person, i)
       })
   
-      peopleStr += ` and ${parsePerson(person, -1)}'s`.replace(`s's`, `s'`)
+      peopleStr += ` and ${parsePerson(person, 0)}'s`.replace(`s's`, `s'`)
     }
     else {
       var person = newPeople[0]
-      peopleStr += parsePerson(person, -1)
+      peopleStr += parsePerson(person, 0)
     }
 
     desc = `${peopleStr} room.`
