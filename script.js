@@ -601,7 +601,7 @@ else {
         peopleStr += parsePerson(person, i)
       })
   
-      peopleStr += ` and ${parsePerson(person, 0)}'s`.replace(`s's`, `s'`)
+      peopleStr += ` and ${parsePerson(lastPerson, 0)}'s`.replace(`s's`, `s'`)
     }
     else {
       var person = newPeople[0]
