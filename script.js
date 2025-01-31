@@ -564,7 +564,7 @@ if (!!r === false) {
   document.querySelector('.rooms').innerHTML = `${nDesc}`
 }
 else {
-  var data = data[parseInt(r)]
+  var data = data[isNaN(r) ? r : parseInt(r)]
   var desc = ''
 
   if (data.description.type === 'Outside') {
