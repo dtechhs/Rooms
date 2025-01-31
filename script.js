@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
 if (!!parseInt(r)) r = parseInt(r)
 
-function parsePerson(person) {
+function parsePerson(person, i) {
   var peopleStr = ''
   var name = person.name
   var displayName = name
@@ -598,14 +598,14 @@ else {
       var lastPerson = newPeople.pop()
 
       newPeople.forEach(function(person, i) {
-        peopleStr += parsePerson(person)
+        peopleStr += parsePerson(person, i)
       })
   
-      peopleStr += ` and ${parsePerson(person)}'s`.replace(`s's`, `s'`)
+      peopleStr += ` and ${parsePerson(person, -1)}'s`.replace(`s's`, `s'`)
     }
     else {
       var person = newPeople[0]
-      peopleStr += parsePerson(person)
+      peopleStr += parsePerson(person, -1)
     }
 
     desc = `${peopleStr} room.`
