@@ -541,19 +541,27 @@ else {
   var data = data[parseInt(r)]
   var desc = ''
 
-  if (data.description.type === 'room') {
+  if (data.description.type === 'Outside') {
     var rooms = data.rooms
     var newRooms = Object.assign([], rooms)
-    var lastRoom = newRooms.pop()
 
     var roomsStr = ''
-    newRooms.forEach(function(room, i) {
-      if (i === 0) roomsStr += room
-      else roomsStr += `, ${room}`
-    })
-    roomsStr += ` and ${lastRoom}`
-
+    if (newRooms.length > 1) {
+      var lastRoom = newRooms.pop()
+      newRooms.forEach(function(room, i) {
+        if (i === 0) roomsStr += room
+        else roomsStr += `, ${room}`
+      })
+      roomsStr += ` and ${lastRoom}`
+  
+    }
+    else {
+      roomsStr = newRooms[0]
+    }
     desc = `Outside of ${roomsStr}.`
+    
+  
+
   }
   else if (data.description.type === 'names') {
     var people = data.people
