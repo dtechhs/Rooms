@@ -563,8 +563,9 @@ if (!!r === false) {
   document.body.setAttribute('align', 'center')
   var nDesc = ''
   Object.keys(data).forEach((r, i) => {
-    if (i !== 0) nDesc += ' | '
+    nDesc += ' | '
     nDesc += `<a href="?r=${r}">${r}</a>`
+    nDesc += ' | <br>'
   })
   document.querySelector('.rooms').innerHTML = `${nDesc}`
 }
