@@ -23,7 +23,7 @@ function parsePerson(person, i) {
     email = name.split(' ')
     var middleNum = Math.floor(email.length/2)
     var firstPart = email.slice(0, middleNum)
-    firstPart.forEach((p, i) => firstPart[0].toLowerCase())
+    firstPart.forEach((p, i) => firstPart[i] = p[0].toLowerCase())
     firstPart = firstPart.join('')
     var lastPart = email.slice(middleNum).join('')
     email = `${firstPart}${lastPart}`.toLowerCase()
