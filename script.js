@@ -13,7 +13,8 @@ function parsePerson(person, i) {
   if (!!person.pro) {
     if (displayName.includes(' ')) {
       displayName = displayName.split(' ')
-      displayName = name.split(`${displayName[0]} `)[1]
+      var middleNum = Math.floor(displayName.length/2)
+      displayName = displayName.slice(middleNum).join(' ')
     }
     displayName = `${person.pro}. ${displayName}`
   }
@@ -65,7 +66,7 @@ var data = {
   105: {
     people: [
       {
-        pro: 'Ms', 
+        pro: 'Mr', 
         name: 'Juan Felipe Olaya Pardo', 
       }
     ],
