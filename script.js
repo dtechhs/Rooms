@@ -4,6 +4,57 @@ const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
 r = isNaN(r) ? r : parseInt(r)
 
+function getDescription(data) {
+  var desc = ''
+
+  if (data.description.type === 'Outside') {
+    var rooms = data.rooms
+    var newRooms = Object.assign([], rooms)
+
+    var roomsStr = ''
+    if (newRooms.length > 1) {
+      var lastRoom = newRooms.pop()
+      newRooms.forEach(function(room, i) {
+        if (i === 0) roomsStr += room
+        else roomsStr += `, ${room}`
+      })
+      roomsStr += ` and ${lastRoom}`
+  
+    }
+    else {
+      roomsStr = newRooms[0]
+    }
+    desc = `Outside of ${roomsStr}.`
+  }
+  else if (data.description.type === 'names') {
+    var people = data.people
+    var newPeople = Object.assign([], people)
+
+    var peopleStr = ''
+    if (newPeople.length > 1) {
+      var lastPerson = newPeople.pop()
+
+      newPeople.forEach(function(person, i) {
+        peopleStr += parsePerson(person, i)
+      })
+  
+      peopleStr += ` and ${parsePerson(lastPerson, 0)}'s`.replace(`s's`, `s'`)
+    }
+    else {
+      var person = newPeople[0]
+      peopleStr += `${parsePerson(person, 0)}'s`.replace(`s's`, `s'`)
+    }
+
+    desc = `${peopleStr} room.`
+  }
+  if (!!desc === false) {
+    desc = data.description
+  }
+  if (!!desc.custom) desc = desc.custom
+
+  return desc
+}
+
 function parsePerson(person, i) {
   var peopleStr = ''
   var name = person.name
@@ -562,64 +613,18 @@ var data = {
 if (!!r === false) {
   document.body.setAttribute('align', 'center')
   var nDesc = ''
+  nDesc += '<table><tr><th>Room</th><th>Description</th></tr>'
   Object.keys(data).forEach((r, i) => {
-    nDesc += ' | '
-    nDesc += `<a href="?r=${r}">${r}</a>`
-    nDesc += ' | <br>'
+    var rData = data[r]
+    var description = getDescription(rData)
+    nDesc += `<tr><td><a href="?r=${r}">${r}</a></td><td>${description}</td></tr>`
   })
+  nDesc += '</table>'
   document.querySelector('.rooms').innerHTML = `${nDesc}`
 }
 else {
   var data = data[isNaN(r) ? r : parseInt(r)]
-  var desc = ''
-
-  if (data.description.type === 'Outside') {
-    var rooms = data.rooms
-    var newRooms = Object.assign([], rooms)
-
-    var roomsStr = ''
-    if (newRooms.length > 1) {
-      var lastRoom = newRooms.pop()
-      newRooms.forEach(function(room, i) {
-        if (i === 0) roomsStr += room
-        else roomsStr += `, ${room}`
-      })
-      roomsStr += ` and ${lastRoom}`
-  
-    }
-    else {
-      roomsStr = newRooms[0]
-    }
-    desc = `Outside of ${roomsStr}.`
-    
-  
-
-  }
-  else if (data.description.type === 'names') {
-    var people = data.people
-    var newPeople = Object.assign([], people)
-
-    var peopleStr = ''
-    if (newPeople.length > 1) {
-      var lastPerson = newPeople.pop()
-
-      newPeople.forEach(function(person, i) {
-        peopleStr += parsePerson(person, i)
-      })
-  
-      peopleStr += ` and ${parsePerson(lastPerson, 0)}'s`.replace(`s's`, `s'`)
-    }
-    else {
-      var person = newPeople[0]
-      peopleStr += `${parsePerson(person, 0)}'s`.replace(`s's`, `s'`)
-    }
-
-    desc = `${peopleStr} room.`
-  }
-  if (!!desc === false) {
-    desc = data.description
-  }
-  if (!!desc.custom) desc = desc.custom
+  var desc = getDescription(data)
 
   document.body.setAttribute('align', 'center')
   document.querySelector('.room').innerHTML = r
