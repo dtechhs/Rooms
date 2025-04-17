@@ -21,7 +21,12 @@ function parsePerson(person, i) {
 
   if (name.includes(' ')) {
     email = name.split(' ')
-    email = `${email[0][0]}${email[1]}`.toLowerCase()
+    var middleNum = Math.floor(email.length/2)
+    var firstPart = email.slice(0, middleNum-1)
+    firstPart.forEach((p, i) => firstPart[0].toLowerCase())
+    firstPart = firstPart.join('')
+    var lastPart = email.slice(middleNum).join('')
+    email = `${firstPart}${lastPart}`.toLowerCase()
     if (!!email) email += '@dtechhs.org'
   }
 
@@ -127,14 +132,13 @@ var data = {
   }, 
   113: {
     description: {
-      custom: 'Dragon Dining!<br>On thr first floor!'
+      custom: 'Dragon Dining!<br>On the first floor!'
     }
   }, 
   114: {
     people: [
       {
-        pro: 'Mr', 
-        name: 'Leo Stern', 
+        name: 'Nick Barella', 
       }, 
       {
         pro: 'Mr', 
