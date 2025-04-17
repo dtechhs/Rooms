@@ -2,7 +2,7 @@ let title = document.title
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var r = urlParams.get('r')
-if (!!parseInt(r)) r = parseInt(r)
+r = isNaN(r) ? r : parseInt(r)
 
 function parsePerson(person, i) {
   var peopleStr = ''
