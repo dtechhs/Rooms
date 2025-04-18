@@ -617,7 +617,7 @@ var data = {
 if (!!r === false) {
   document.body.setAttribute('align', 'center')
   var nDesc = ''
-  nDesc += '<table><tr><th>Room</th><th>Description</th></tr>'
+  nDesc += '<table class="rooms-list" border="1" cellspacing="0"><tr><th>Room</th><th>Description</th></tr>'
   Object.keys(data).forEach((r, i) => {
     var rData = data[r]
     var description = getDescription(rData).replaceAll('<br>', ' ').replaceAll('</p><p>', ' ').replaceAll('  ', ' ')
