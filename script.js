@@ -416,7 +416,6 @@ var data = {
   207: {
     people: [
       {
-        pro: 'Ms', 
         name: 'Ingrid Mao', 
       }
     ],
@@ -448,6 +447,7 @@ var data = {
   209: {
     people: [
       {
+        pro: 'Ms', 
         name: 'Amanda England', 
       }, 
       {
@@ -616,7 +616,7 @@ if (!!r === false) {
   nDesc += '<table><tr><th>Room</th><th>Description</th></tr>'
   Object.keys(data).forEach((r, i) => {
     var rData = data[r]
-    var description = getDescription(rData)
+    var description = getDescription(rData).replaceAll('<br>', ' ').replaceAll('</p><p>', ' ').replaceAll('  ', ' ')
     nDesc += `<tr><td><a href="?r=${r}">${r}</a></td><td>${description}</td></tr>`
   })
   nDesc += '</table>'
